@@ -1,21 +1,16 @@
 
-body{
-    background: #1A1E1F;
-}
+ .cover {
+    /* background: #1D2123; */
+} 
 
 *{
 padding: 5px;
 font-family: 'Quicksand', sans-serif;
 }
 
-
-.active{
-    width: 30px;
-    height: 30px;
-}
-
 .top-nav{
     display: flex;
+    justify-content: flex-start;
 }
 
 .sec1{
@@ -68,10 +63,37 @@ top: 25px;
     border-radius: 40px;
 }
 
-.ripple{
-    position: relative;
-    left: 25%;
+
+.cover-pic{
+position: absolute;
+width: 380.67px;
+height: 382px;
+left: 323px;
+top: -4px;
 }
+
+.ripple{
+    height: 380px;
+    animation-name: spin;
+    animation-duration: 2s;
+    top: 0;
+    position: absolute;
+     left: 25%;
+}
+
+@keyframes spin {
+    from{
+        left:-10%;
+        
+    }
+    to{
+        left: 23%;
+        
+        
+    }
+}
+
+
 
 .sec1{
     display: flex;
@@ -88,8 +110,9 @@ top: 25px;
 }
 .scrollmenu{
     overflow-y: hidden;
+    overflow-x: hidden;
     width: 100%;
-    overflow: auto;
+
     display: flex;
     justify-content: space-between;
 }
@@ -99,8 +122,8 @@ top: 25px;
 }
 
 .playlist{
-    display: flex;
-    position: relative;
+display: flex;
+position: relative;
 width: 417px;
 height: 96px;
 /* dark-alt */
@@ -117,7 +140,6 @@ left: 0px;
 top: 10px;
 
 /* dark-alt */
-
 background: #1A1E1F;
 border-radius: 20px;
 }
@@ -157,23 +179,20 @@ color: #FFFFFF;
 }
 
 .heart{
-    position: absolute;
+position: absolute;
 left: 10.42%;
 right: 10.43%;
 top: 12.5%;
 bottom: 12.51%;
-
 /* secondary */
-
-border: 0.5625px solid #FACD66;
-
+border-radius: 50%;
 box-sizing: border-box;
-
 position: absolute;
 width: 37px;
 height: 37px;
 left: 359px;
 top: 30px;
+border: 1px solid rgba(255, 255, 255, 0.11);
 
 }
 
@@ -205,15 +224,161 @@ width: 37px;
 height: 14px;
 left: 94px;
 top: 63px;
-
 /* Regular/12px */
-
-font-family: 'Quicksand';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 120%;
 /* or 14px */
-
 color: #FFFFFF;
+}
+
+.text-rel{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.text-rel h6{
+    height: 14px;
+    left: 45px;
+    /* Regular/12px */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    /* or 14px */
+    color: #FFFFFF;
+}
+
+.text-rel h3{
+    position: relative;
+    height: 42px;
+    top: 40px;
+    /* Bold/35px */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    /* identical to box height, or 42px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.text-rel h4{
+    position: relative;
+    top: 30px;
+    width: 276px;
+    height: 51px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    /* or 17px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+}
+
+.text-rel-images{
+display: flex;  
+}
+
+
+.rel-images{
+    /* Frame 4 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 64px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+
+
+/* Ellipse 6 */
+/* 
+width: 20px;
+height: 20px;
+
+background: url(.png);
+filter: drop-shadow(-2px 0px 2px rgba(0, 0, 0, 0.38));
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0; */
+
+}
+
+
+.second-mg{
+    
+width: 40px;
+height: 40px;
+
+background: url(.png);
+filter: drop-shadow(-2px 0px 2px rgba(0, 0, 0, 0.1));
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px -9px;
+}
+
+.third-mg{
+    
+width: 20px;
+height: 20px;
+
+background: url(.png);
+filter: drop-shadow(-2px 0px 2px rgba(0, 0, 0, 0.38));
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px -9px;
+
+}
+
+.fourth-mg{
+    width: 40px;
+height: 40px;
+
+background: url(.png);
+filter: drop-shadow(-2px 0px 2px rgba(0, 0, 0, 0.38));
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 0px -9px;
+}
+
+.fifth-mg{
+    width: 20px;
+height: 20px;
+
+background: url(.png);
+filter: drop-shadow(-2px 0px 2px rgba(0, 0, 0, 0.38));
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 0px -9px;
 }
